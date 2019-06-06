@@ -13,8 +13,8 @@ for i in range(1, MAX_PAGE_NUM + 1):
 
     driver.get(url)
 
-    title = driver.find_elements_by_xpath('//div[@title="buyer-name"]')
-    excerpt = driver.find_elements_by_xpath('//span[@class="item-price"]')
+    title = driver.find_elements_by_xpath('//div[@title="post-title"]')
+    excerpt = driver.find_elements_by_xpath('//span[@class="text-preview"]')
 
     num_page_items = len(title)
     with open('results.csv', 'a') as f:
